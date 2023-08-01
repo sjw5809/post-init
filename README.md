@@ -1,21 +1,6 @@
 # postcli-init
 Spacemesh postcli init for jiutian
 
-terminal1:
-
-git clone http://github.com/sjw5809/post-init /root/tran
-
-cd tran
-
-chmod 755 *
-
-./init.sh
-
-./postcli xxx
+curl -sSL https://github.com/sjw5809/post-init/blob/main/init.sh | bash numunit fromfile tofile nodeid
 
 
-terminal2:
-
-cd tran
-
-./move.sh
