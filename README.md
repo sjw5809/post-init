@@ -9,6 +9,7 @@ chmod 755 *
 
 ./postcli xxx
 
+
 terminal2:
 cd tran
 ./move.sh
