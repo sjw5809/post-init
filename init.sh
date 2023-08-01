@@ -35,6 +35,7 @@ do
  for aa in $(ls -s /root/tran/01 | awk '/1048576/{print $2}')
  do
    num=$(echo $aa |sed -r 's/^[^0-9]+([0-9]+).*/\1/')
+   mm5=$(md5sum /root/tran/01/$aa)
    name=tran$num.pth.gz
   echo $(date +%H:%M:%S) $aa $name $(df -h | awk  '/.local/{print $4}')
   echo 1 >>/root/tran/wait/$name
