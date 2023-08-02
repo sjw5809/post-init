@@ -7,7 +7,7 @@ tofile=$3
 nodeid=$4
 
 #准备文件夹
-cd root
+cd /root
 mkdir /root/tran
 mkdir /root/tran/01
 mkdir /root/tran/data
