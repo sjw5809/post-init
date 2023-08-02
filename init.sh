@@ -7,6 +7,7 @@ tofile=$3
 nodeid=$4
 
 #准备文件夹
+echo start
 cd /root
 mkdir /root/tran
 mkdir /root/tran/01
