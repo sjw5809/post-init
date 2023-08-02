@@ -36,7 +36,7 @@ do
  do
    num=$(echo $aa |sed -r 's/^[^0-9]+([0-9]+).*/\1/')
    mm5=$(md5sum /root/tran/01/$aa)
-   name=tran${mm5:0:7}$num.pth.gz
+   name=${mm5:0:9}$num.pth.gz
   echo $(date +%H:%M:%S) $aa $name $(df -h | awk  '/.local/{print $4}')
   echo 1 >>/root/tran/wait/$name
   mv /root/tran/01/$aa /root/tran/data/$name
