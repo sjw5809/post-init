@@ -24,9 +24,11 @@ chmod 755 *
 #输出token
 jupyter server list
 #有参数后台开始
-if[ -n $nodeid ];then
+echo numunit $numunit
+if [ $numunit -gt 0 ]
+then
   screen -dmS tran
-  screen -x -S tran -p 0 -X stuff $'/root/tran/postcli -numUnits $numunit -fromFile $fromfile -toFile $tofile -commitmentAtxId=$atxid -id $nodeid -maxFileSize 1073741824 -provider 0 -datadir /root/tran/01 \n'
+  screen -x -S tran -p 0 -X stuff "/root/tran/postcli -numUnits $numunit -fromFile $fromfile -toFile $tofile -commitmentAtxId=$atxid -id $nodeid -maxFileSize 1073741824 -provider 0 -datadir /root/tran/01 \n"
 fi
 
 #完成文件移动
