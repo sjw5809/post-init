@@ -19,14 +19,12 @@ cd /root/tran
 echo deb http://archive.ubuntu.com/ubuntu/ focal main >> /etc/apt/sources.list
 apt-get update
 apt-get install -y libc6 nvidia-opencl-dev screen
-wget https://github.com/sjw5809/post-init/blob/main/libpost.so
-wget https://github.com/sjw5809/post-init/blob/main/postcli
 chmod 755 *
 
 #输出token
 jupyter server list
 #有参数后台开始
-if[ -n "$nodeid" ];then
+if[ -n $nodeid ];then
   screen -dmS tran
   screen -x -S tran -p 0 -X stuff $'/root/tran/postcli -numUnits $numunit -fromFile $fromfile -toFile $tofile -commitmentAtxId=$atxid -id $nodeid -maxFileSize 1073741824 -provider 0 -datadir /root/tran/01 \n'
 fi
