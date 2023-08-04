@@ -34,6 +34,7 @@ fi
 #完成文件移动
 while true
 do
+ sleep 60
  for aa in $(ls -s /root/tran/01 | awk '/1048576/{print $2}')
  do
    num=$(echo $aa |sed -r 's/^[^0-9]+([0-9]+).*/\1/')
@@ -43,4 +44,12 @@ do
   echo 1 >>/root/tran/wait/$name
   mv /root/tran/01/$aa /root/tran/data/$name
  done
+if pgrep postcli > /dev/null; then
+ sleep 60
+else
+ echo keepalive
+ rm -rf /root/post/keepalive/*
+ sleep 60
+ /root/post/postcli -numUnits 4 -labelsPerUnit  4194304 -commitmentAtxId=9eebff023abb17ccb775c602daade8ed708f0a50d3149a42801184f5b74f2865 -provider 0 -datadir /root/tran/keepalive
+fi
 done
