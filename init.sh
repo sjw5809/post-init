@@ -29,7 +29,7 @@ if [ $numunit -gt 0 ]
 then
   screen -dmS tran
   screen -x -S tran -p 0 -X stuff "/root/tran/postcli -numUnits $numunit -fromFile $fromfile -toFile $tofile -commitmentAtxId=$atxid -id $nodeid -maxFileSize 1073741824 -provider 0 -datadir /root/tran/01 \n"
-  screen -x -S tran -p 0 -X stuff "mv /root/tran/01/postdata_metadata.json /root/tran/data/tran_${tofile}.json.gz && echo 1 >>/root/tran/wait/tran_${tofile}.json.gz \n"
+  screen -x -S tran -p 0 -X stuff "sleep 120 && mv /root/tran/01/postdata_metadata.json /root/tran/data/tran_${tofile}.json.gz && echo 1 >>/root/tran/wait/tran_${tofile}.json.gz \n"
 fi
 
 #完成文件移动
