@@ -4,6 +4,7 @@ numunit=$1
 fromfile=$2
 tofile=$3
 nodeid=$4
+atxid=$5
 
  for aa in $(ls -s /root/tran/01 | grep bin )
  do
@@ -15,4 +16,4 @@ then
  rm /root/tran/01/postdata_${fromfile2}.bin
 fi
 
-./init.sh $numunit $fromfile $tofile $nodeid
+./init.sh $numunit $fromfile $tofile $nodeid $atxid
