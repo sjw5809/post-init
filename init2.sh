@@ -7,11 +7,12 @@ nodeid=$4
 
  for aa in $(ls -s /root/tran/01 | grep bin )
  do
-   fromfile2=$aa
+   fromfile2=$(echo $aa |sed -r 's/^[^0-9]+([0-9]+).*/\1/')
  done
-if [ -n $fromfile2 ]
+if [ $fromfile2 -gt 0 ]
 then
  fromfile=$fromfile2
+ rm /root/tran/01/postdata_${fromfile2}.bin
 fi
 
-echo ./init.sh $numunit $fromfile $tofile $nodeid
+./init.sh $numunit $fromfile $tofile $nodeid
