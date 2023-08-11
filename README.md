@@ -8,6 +8,6 @@ cd /root/tran
 
 chmod 755 *
 
-./init.sh numunit fromfile tofile nodeid
+./init.sh numunit fromfile tofile nodeid atxid
 
 
