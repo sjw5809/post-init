@@ -1,10 +1,10 @@
 #!/bin/bash
 
-atxid=9eebff023abb17ccb775c602daade8ed708f0a50d3149a42801184f5b74f2865
 numunit=$1
 fromfile=$2
 tofile=$3
 nodeid=$4
+atxid=$5
 
 #准备文件夹
 echo start
