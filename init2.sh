@@ -15,5 +15,5 @@ then
  fromfile=$fromfile2
  rm /root/tran/01/postdata_${fromfile2}.bin
 fi
-
+echo $numunit $fromfile $tofile $nodeid $atxid
 ./init.sh $numunit $fromfile $tofile $nodeid $atxid
