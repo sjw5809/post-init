@@ -8,6 +8,8 @@ atxid=$5
 
 #准备文件夹
 echo start
+#输出token
+jupyter server list
 cd /root
 mkdir /root/tran
 mkdir /root/tran/01
