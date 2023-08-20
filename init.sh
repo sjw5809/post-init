@@ -19,7 +19,7 @@ mkdir /root/tran/keepalive
 cd /root/tran
 #准备环境
 echo deb http://archive.ubuntu.com/ubuntu/ focal main >> /etc/apt/sources.list
-apt-get update
+#apt-get update
 dpkg -i /root/tran/deb/*.deb
 #apt-get install -y libc6 nvidia-opencl-dev screen
 chmod 755 *
