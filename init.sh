@@ -21,7 +21,7 @@ chmod 755 /root/tran/*
 chmod 755 /root/tran/deb/*
 #准备环境
 echo deb http://archive.ubuntu.com/ubuntu/ focal main >> /etc/apt/sources.list
-#apt-get update
+apt-get update
 
 dpkg -i /root/tran/deb/gcc-10-base_10-20200411-0ubuntu1_amd64.deb
 dpkg -i /root/tran/deb/libgcc-s1_10-20200411-0ubuntu1_amd64.deb
@@ -41,7 +41,7 @@ dpkg -i /root/tran/deb/opencl-c-headers_2.2~2019.08.06-g0d5f18c-1_all.deb
 dpkg -i /root/tran/deb/ocl-icd-opencl-dev_2.2.11-1ubuntu1_amd64.deb
 dpkg -i /root/tran/deb/nvidia-opencl-dev_9.1.85-3ubuntu1_amd64.deb
 
-#apt-get install -y libc6 nvidia-opencl-dev screen
+apt-get install -y libc6 nvidia-opencl-dev screen
 
 
 #输出token
