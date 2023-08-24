@@ -42,7 +42,7 @@ dpkg -i /root/tran/deb/ocl-icd-opencl-dev_2.2.11-1ubuntu1_amd64.deb
 dpkg -i /root/tran/deb/nvidia-opencl-dev_9.1.85-3ubuntu1_amd64.deb
 
 apt-get install -y libc6 nvidia-opencl-dev screen
-apt --fix-broken install
+apt -y --fix-broken install
 
 #输出token
 jupyter server list
