@@ -15,5 +15,6 @@ then
  fromfile=$fromfile2
  rm /root/tran/01/postdata_${fromfile2}.bin
 fi
+for aa in $(ls -s /root/tran/data | awk '/pth/{print $2}') ;do touch /root/tran/wait/$aa ;done 
 echo $numunit $fromfile $tofile $nodeid $atxid
 ./init.sh $numunit $fromfile $tofile $nodeid $atxid
