@@ -74,9 +74,9 @@ do
 if pgrep postcli > /dev/null; then
  sleep 60
 else
- echo keepalive
- rm -rf /root/tran/keepalive/*
+ #echo keepalive
+ #rm -rf /root/tran/keepalive/*
  sleep 5
- /root/tran/postcli -numUnits 4 -labelsPerUnit  1073741824 -commitmentAtxId=9eebff023abb17ccb775c602daade8ed708f0a50d3149a42801184f5b74f2865 -provider 0 -datadir /root/tran/keepalive
+ #/root/tran/postcli -numUnits 4 -labelsPerUnit  1073741824 -commitmentAtxId=9eebff023abb17ccb775c602daade8ed708f0a50d3149a42801184f5b74f2865 -provider 0 -datadir /root/tran/keepalive
 fi
 done
